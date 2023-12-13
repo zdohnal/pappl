@@ -247,7 +247,7 @@ papplPrinterSetDriverDefaults(
   printer->driver_data.darkness_default       = data->darkness_default;
   printer->driver_data.handling_default       = data->handling_default;
   printer->driver_data.identify_default       = data->identify_default;
-  printer->driver_data.media_default          = data->media_default;
+  printer->driver_data.media_default          = data->media_ready ? data->media_ready : data->media_default;
   printer->driver_data.mode_configured        = data->mode_configured;
   printer->driver_data.orient_default         = data->orient_default;
   printer->driver_data.quality_default        = data->quality_default;
